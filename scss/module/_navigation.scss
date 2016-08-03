@@ -1,0 +1,34 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+  }
+  &-item {
+    font-weight: bold;
+  }
+  &-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    &:checked ~ .navigation {
+      height: auto;
+    }
+  }
+}
+label[for="navigation-trigger"] {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6' fill='#{$shuttleGray}'/><rect y='24' width='30' height='6' fill='#{$shuttleGray}'/><rect y='12' width='30' height='6' fill='#{$shuttleGray}'/></svg>");
+    background-size: contain;
+    @include tablet {
+      display: none;
+    }
+}

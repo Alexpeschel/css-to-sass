@@ -1,0 +1,34 @@
+/*Footer*/
+.footer {
+  display: flex;
+  padding: 30px 0;
+  margin: 0 15px;
+  border-top: 1px solid #e7e7e7;
+  @include tablet {
+    padding: 30px 0 60px;
+  }
+  @include desktop {
+    margin: 0 30px;
+  }
+  &-item {
+    width: 50%;
+    @include font-size($fontsize-xs);
+    font-weight: bold;
+    @extend %itemhover;
+  }
+  .navigation {
+    display: none;
+    @include tablet {
+      display: block;
+      width: 50%;
+      text-align: right;
+    }
+    &-item {
+      @extend %itemhover;
+      @include tablet {
+        padding-left: 28px;
+        @include font-size($fontsize-xs);
+      }
+    }
+  }
+}

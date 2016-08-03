@@ -1,0 +1,25 @@
+/*Skills*/
+.skills {
+  padding: 0 15px 40px;
+  @include tablet {
+    padding: 0 30px 40px;
+  }
+  &-heading {
+    @extend %sectionheading;
+  }
+  &-html::before {
+    transform: rotate(.1turn);
+  }
+  &-css::before {
+    transform: rotate(.1turn);
+  }
+  &-js::before {
+    transform: rotate(.3turn);
+  }
+  &-ps::before {
+    transform: rotate(.2turn);
+  }
+  &-ai::before {
+    transform: rotate(.2turn);
+  }
+}

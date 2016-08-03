@@ -1,0 +1,38 @@
+/*Contact*/
+.contact {
+ padding: 0 15px 40px;
+ background: $athensGray;
+ text-align: center;
+ @include tablet {
+    padding: 0 30px 40px;
+ }
+ &-heading {
+   @extend %sectionheading;
+ }
+ &-text {
+   @extend %bigtext;
+   @include tablet {
+     max-width: 526px;
+     margin: 0 auto;
+     padding: 16px 0 30px;
+     @include font-size($fontsize-l);
+   }
+ }
+ &-data {
+   margin: 20px 0;
+   color: $regentGray;
+   @include tablet {
+     @include font-size($fontsize-l);
+   }
+   &-label {
+     padding-right: 10px;
+   }
+   &-phone,
+   &-email {
+     font-weight: bold;
+   }
+   &-phone {
+     letter-spacing: 2px;
+   }
+ }
+}

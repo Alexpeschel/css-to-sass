@@ -1,0 +1,37 @@
+.pies {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.pie {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+  background: #626f7e;
+  background-image: linear-gradient(to right, transparent 50%, $athensGray 0);
+  color: transparent;
+  line-height: 100px;
+  border-radius: 50%;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background-color: inherit;
+    transform-origin: left;
+  }
+  &-heading {
+    text-align: center;
+  }
+  &-wrap {
+    padding: 0 0 15px;
+  }
+}

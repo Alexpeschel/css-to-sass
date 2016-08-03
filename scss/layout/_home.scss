@@ -1,0 +1,37 @@
+/*Home*/
+.home {
+   position: relative;
+   padding: 40px 15px 30px;
+   background: #DEE1E3;
+   text-align: center;
+   @include tablet {
+     display: flex;
+     padding: 55px 30px 60px;
+   }
+   @include desktop {
+     padding: 55px 30px 60px;
+   }
+   &-image {
+     box-sizing: border-box;
+     padding: 0 36px 10px;
+     margin: 0;
+     @include tablet {
+       width: 155%;
+       max-width: 368px;
+       padding: 0;
+     }
+   }
+   &-text {
+     @extend %bigtext;
+     @include tablet {
+       order: -1;
+       padding-right: 15px;
+       margin-top: 0;
+       @include font-size($fontsize-m);
+       text-align: left;
+     }
+     @include desktop {
+       padding-right: 35px;
+     }
+   }
+}

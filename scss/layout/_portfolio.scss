@@ -1,0 +1,52 @@
+/*Portfolio*/
+.portfolio {
+  padding: 0 15px 5px;
+  background: $athensGray;
+  @include tablet {
+    padding: 0 30px;
+  }
+  &-heading {
+    @extend %sectionheading;
+  }
+  &-list {
+    margin-top: 20px;
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px -6px;
+    }
+    @include desktop {
+      margin: 20px -9px;
+    }
+  }
+  &-item {
+    padding: 0 0 40px;
+    text-align: center;
+    @include tablet {
+      flex: 0 1 50%;
+      box-sizing: border-box;
+      padding: 6px;
+    }
+    @include desktop {
+      flex: 0 1 33%;
+      padding: 9px;
+    }
+    &-heading {
+
+    }
+    &-text {
+      padding: 0 5px;
+      margin: 0;
+      @include font-size(15px);
+      line-height: 1.6;
+      @include tablet {
+        max-width: 266px;
+        margin: 0px auto;
+        padding: 0 0 40px;
+      }
+      @include desktop {
+        padding: 5px 0 30px;
+      }
+    }
+  }
+}

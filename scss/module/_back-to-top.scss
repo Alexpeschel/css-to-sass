@@ -1,0 +1,12 @@
+.back-to-top {
+  display: inline-block;
+  width: 50%;
+  @include font-size($fontsize-xs);
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+  @extend %itemhover;
+  @include tablet {
+    display: none;
+  }
+}
